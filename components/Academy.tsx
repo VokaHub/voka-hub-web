@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowUpRight, Play, Mic, MonitorPlay } from 'lucide-react';
+
 
 const events = [
   { date: "12 OCT", isoDate: "2024-10-12", title: "Fotografía de Producto", category: "Workshop", time: "18:00" },
