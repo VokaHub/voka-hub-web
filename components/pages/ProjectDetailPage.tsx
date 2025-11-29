@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 import { projectsData } from '../data/projectsData';
 
 const ProjectDetailPage: React.FC = () => {
@@ -33,7 +33,7 @@ const ProjectDetailPage: React.FC = () => {
           {/* 1. Header Section */}
           <div className="mb-12">
              <Link to="/portafolio" className="inline-flex items-center gap-2 text-zinc-500 text-xs font-bold uppercase tracking-widest mb-8 hover:text-white transition-colors">
-                <ArrowLeft size={14} /> Volver al Portafolio
+                <ArrowLeftIcon className="w-[14px] h-[14px]" /> Volver al Portafolio
              </Link>
              <h1 className="text-5xl md:text-8xl font-light tracking-tighter uppercase text-white mb-4">
                 {project.title}
@@ -96,7 +96,7 @@ const ProjectDetailPage: React.FC = () => {
                 <Link to={`/portafolio/${prevProject.id}`} className="group block py-16 md:py-24 px-6 md:px-12 hover:bg-zinc-900 transition-colors relative overflow-hidden">
                    <div className="relative z-10 flex flex-col items-start">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-4 group-hover:text-indigo-400 transition-colors flex items-center gap-2">
-                         <ArrowLeft size={12} /> Anterior
+                         <ArrowLeftIcon className="w-3 h-3" /> Anterior
                       </span>
                       <span className="text-2xl md:text-4xl font-light text-zinc-400 group-hover:text-white transition-colors uppercase">
                          {prevProject.title}
@@ -107,7 +107,7 @@ const ProjectDetailPage: React.FC = () => {
                 <Link to={`/portafolio/${nextProject.id}`} className="group block py-16 md:py-24 px-6 md:px-12 hover:bg-zinc-900 transition-colors text-right relative overflow-hidden">
                    <div className="relative z-10 flex flex-col items-end">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-4 group-hover:text-indigo-400 transition-colors flex items-center gap-2">
-                         Siguiente <ArrowRight size={12} />
+                         Siguiente <ArrowRightIcon className="w-3 h-3" />
                       </span>
                       <span className="text-2xl md:text-4xl font-light text-zinc-400 group-hover:text-white transition-colors uppercase">
                          {nextProject.title}

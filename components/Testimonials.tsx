@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 const testimonials = [
   {
@@ -61,8 +61,8 @@ const Testimonials: React.FC = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                     <button onClick={prev} className="p-3 border border-zinc-800 hover:border-white transition-colors text-zinc-400 hover:text-white"><ChevronLeft size={18}/></button>
-                     <button onClick={next} className="p-3 border border-zinc-800 hover:border-white transition-colors text-zinc-400 hover:text-white"><ChevronRight size={18}/></button>
+                     <button onClick={prev} className="p-3 border border-zinc-800 hover:border-white transition-colors text-zinc-400 hover:text-white"><ChevronLeftIcon className="w-[18px] h-[18px]" /></button>
+                     <button onClick={next} className="p-3 border border-zinc-800 hover:border-white transition-colors text-zinc-400 hover:text-white"><ChevronRightIcon className="w-[18px] h-[18px]" /></button>
                   </div>
                </div>
             </div>

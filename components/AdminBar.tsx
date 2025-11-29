@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useProjects } from './context/ProjectsContext';
+import { Save, RotateCcw, Code, Wand2, X, Check } from 'lucide-react';
 
 const AdminBar: React.FC = () => {
   const { isAdmin, toggleAdmin, resetData, projects, activeFieldHint } = useProjects();

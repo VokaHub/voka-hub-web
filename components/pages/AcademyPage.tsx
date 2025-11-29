@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
-import { Play, Mic, Clock, X, ArrowRight, Check, User, MonitorPlay } from 'lucide-react';
+import { MicrophoneIcon, ClockIcon, XMarkIcon, ArrowRightIcon, CheckIcon, UserIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline';
+import { PlayIcon } from '@heroicons/react/24/solid';
 
 interface Event {
   id: number;
@@ -133,7 +133,7 @@ const AcademyPage: React.FC = () => {
           
           <div className="bg-white w-full max-w-4xl relative z-10 shadow-2xl animate-in fade-in zoom-in duration-300 flex flex-col md:flex-row overflow-hidden max-h-[90vh]">
              <button onClick={closeModal} className="absolute top-4 right-4 z-20 bg-white/50 hover:bg-white rounded-full p-1 transition-colors">
-                <X size={20} />
+                <XMarkIcon className="w-5 h-5" />
              </button>
 
              {/* COLUMNA IZQUIERDA: FLYER */}
@@ -161,7 +161,7 @@ const AcademyPage: React.FC = () => {
                         {selectedEvent.title}
                       </h2>
                       <div className="flex items-center gap-2 text-zinc-500 text-sm font-medium mb-6">
-                         <User size={14} />
+                         <UserIcon className="w-[14px] h-[14px]" />
                          <span>{selectedEvent.instructor}</span>
                          <span className="text-zinc-300">|</span>
                          <span>{selectedEvent.instructorRole}</span>
@@ -173,7 +173,7 @@ const AcademyPage: React.FC = () => {
 
                       <div className="bg-zinc-50 p-6 border border-zinc-100 mb-8">
                          <h4 className="text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
-                           <Check size={14} className="text-indigo-600" /> Incluye (VOKA Standard)
+                           <CheckIcon className="w-[14px] h-[14px] text-indigo-600" /> Incluye (VOKA Standard)
                          </h4>
                          <ul className="space-y-2">
                            {vokaPerks.map((perk, i) => (
@@ -202,14 +202,14 @@ const AcademyPage: React.FC = () => {
                          className="w-full py-4 bg-black text-white font-bold uppercase tracking-widest hover:bg-indigo-600 transition-colors flex justify-between items-center px-6"
                        >
                          <span>Me interesa</span>
-                         <ArrowRight size={18} />
+                         <ArrowRightIcon className="w-[18px] h-[18px]" />
                        </button>
                     </div>
                   </>
                 ) : (
                   <form onSubmit={handleLeadSubmit} className="flex flex-col h-full justify-center animate-in slide-in-from-right fade-in duration-300">
                      <button type="button" onClick={() => setStep('info')} className="flex items-center gap-2 text-zinc-400 text-xs font-bold uppercase tracking-widest mb-8 hover:text-black">
-                        <ArrowRight size={14} className="rotate-180" /> Volver a Info
+                        <ArrowRightIcon className="w-[14px] h-[14px] rotate-180" /> Volver a Info
                      </button>
                      
                      <h3 className="text-2xl font-light mb-2">Casi listo.</h3>
@@ -309,8 +309,8 @@ const AcademyPage: React.FC = () => {
                           {event.title}
                        </h4>
                        <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-500">
-                          <span className="flex items-center gap-1"><Clock size={14} /> {event.time}</span>
-                          <span className="flex items-center gap-1"><User size={14} /> {event.instructor}</span>
+                          <span className="flex items-center gap-1"><ClockIcon className="w-[14px] h-[14px]" /> {event.time}</span>
+                          <span className="flex items-center gap-1"><UserIcon className="w-[14px] h-[14px]" /> {event.instructor}</span>
                           <span className="px-2 py-0.5 border border-zinc-200 rounded-full text-[10px] uppercase font-bold tracking-wider">{event.category}</span>
                        </div>
                     </div>
@@ -319,7 +319,7 @@ const AcademyPage: React.FC = () => {
                     <div className="shrink-0 flex items-center gap-8">
                        <span className="text-xl font-medium text-zinc-900">{event.price}</span>
                        <div className="w-10 h-10 rounded-full border border-zinc-300 flex items-center justify-center group-hover:bg-black group-hover:border-black group-hover:text-white transition-all">
-                          <ArrowRight size={16} className="group-hover:-rotate-45 transition-transform duration-300" />
+                          <ArrowRightIcon className="w-4 h-4 group-hover:-rotate-45 transition-transform duration-300" />
                        </div>
                     </div>
                  </div>
@@ -332,12 +332,12 @@ const AcademyPage: React.FC = () => {
            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
               <div>
                  <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-indigo-600 mb-4">
-                    <Mic size={14} /> VOKA Talks
+                    <MicrophoneIcon className="w-[14px] h-[14px]" /> VOKA Talks
                  </span>
                  <h2 className="text-4xl font-light tracking-tighter">Conversaciones<br/>sin filtro.</h2>
               </div>
               <button className="hidden md:flex items-center gap-2 border-b border-black pb-1 text-xs font-bold uppercase tracking-widest hover:text-indigo-600 hover:border-indigo-600 transition-colors">
-                 <MonitorPlay size={14} /> Watch Podcast
+                 <ComputerDesktopIcon className="w-[14px] h-[14px]" /> Watch Podcast
               </button>
            </div>
 
@@ -348,7 +348,7 @@ const AcademyPage: React.FC = () => {
                        <img src={`https://picsum.photos/600/600?random=${ep + 50}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity">
                           <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black">
-                             <Play size={20} fill="currentColor" className="ml-1"/>
+                             <PlayIcon className="w-5 h-5 ml-1" />
                           </div>
                        </div>
                     </div>

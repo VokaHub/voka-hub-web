@@ -1,6 +1,6 @@
-
 import React from 'react';
-
+import { ArrowUpRightIcon, MicrophoneIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline';
+import { PlayIcon } from '@heroicons/react/24/solid';
 
 const events = [
   { date: "12 OCT", isoDate: "2024-10-12", title: "Fotografía de Producto", category: "Workshop", time: "18:00" },
@@ -38,7 +38,7 @@ const Academy: React.FC = () => {
                  <div className="mb-8">
                     <div className="flex justify-between items-start mb-4">
                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600 flex items-center gap-2">
-                         <Mic size={12} /> VOKA Podcast
+                         <MicrophoneIcon className="w-3 h-3" /> VOKA Podcast
                        </span>
                        <span className="text-[10px] font-bold bg-indigo-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider">Latest Drop</span>
                     </div>
@@ -51,7 +51,7 @@ const Academy: React.FC = () => {
                  <div className="aspect-video w-full bg-zinc-100 relative flex items-center justify-center cursor-pointer overflow-hidden">
                     <img src="https://picsum.photos/600/400?grayscale" className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
                     <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform shadow-xl">
-                       <Play size={16} fill="currentColor" className="ml-1" />
+                       <PlayIcon className="w-4 h-4 ml-1" />
                     </div>
                  </div>
               </div>
@@ -68,14 +68,14 @@ const Academy: React.FC = () => {
                        </div>
                        <div className="flex items-center justify-between">
                           <span className="text-[10px] uppercase tracking-wider text-zinc-600 border border-zinc-300 px-2 py-1 rounded-full">{e.category}</span>
-                          <ArrowUpRight className="text-black transition-colors w-4 h-4" />
+                          <ArrowUpRightIcon className="text-black transition-colors w-4 h-4" />
                        </div>
                     </div>
                  ))}
               </div>
               <div className="mt-8 text-center md:text-left">
                   <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black hover:text-indigo-600 transition-colors">
-                     <MonitorPlay size={14} /> Watch Podcast
+                     <ComputerDesktopIcon className="w-3.5 h-3.5" /> Watch Podcast
                   </button>
               </div>
            </div>

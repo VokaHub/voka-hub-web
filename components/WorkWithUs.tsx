@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const WorkWithUs: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const WorkWithUs: React.FC = () => {
         <div className="flex justify-center mt-16">
            <button className="flex items-center gap-6 px-10 py-5 bg-white text-black hover:bg-zinc-200 transition-colors">
              <span className="text-sm font-bold tracking-widest uppercase">Agendar Reunión</span>
-             <ArrowRight className="w-5 h-5" />
+             <ArrowRightIcon className="w-5 h-5" />
            </button>
         </div>
       </div>

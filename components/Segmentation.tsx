@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Check, X, Building2, Zap, Users, Briefcase } from 'lucide-react';
+import { ArrowRightIcon, CheckIcon, XMarkIcon, BuildingOffice2Icon, BoltIcon, UsersIcon, BriefcaseIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
 const Segmentation: React.FC = () => {
@@ -42,7 +42,7 @@ const Segmentation: React.FC = () => {
           
           <div className="bg-white w-full max-w-lg relative z-10 shadow-2xl animate-in fade-in zoom-in duration-300">
             <button onClick={closeModal} className="absolute top-4 right-4 text-zinc-400 hover:text-black transition-colors">
-              <X size={24} />
+              <XMarkIcon className="w-6 h-6" />
             </button>
 
             <div className="p-12">
@@ -161,38 +161,38 @@ const Segmentation: React.FC = () => {
               {/* Feature List */}
               <ul className="space-y-4 mb-12 flex-grow">
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Sesión de descubrimiento <strong>gratuita</strong>.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Diagnóstico estratégico con <strong>Coaching AI</strong>.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Diseño de plan modular (Guía paso a paso).</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight"><strong>Project Director</strong> asignado.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Coordinación operativa y supervisión de resultados.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Acceso a <strong>Red de Talento Certificado</strong>.</span>
                 </li>
                  <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Acceso total a base de recursos.</span>
                 </li>
               </ul>
 
               <button onClick={() => openModal('full')} className="w-full py-4 border border-black flex justify-between items-center px-6 hover:bg-black hover:text-white transition-colors group-hover:bg-black group-hover:text-white">
                 <span className="text-sm font-bold uppercase tracking-widest">Iniciar Proceso</span>
-                <ArrowRight size={18} />
+                <ArrowRightIcon className="w-[18px] h-[18px]" />
               </button>
             </div>
             
@@ -223,19 +223,19 @@ const Segmentation: React.FC = () => {
                {/* Feature List */}
               <ul className="space-y-4 mb-8 flex-grow">
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Sesión de descubrimiento <strong>gratuita</strong>.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Coordinación operativa y supervisión de resultados.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Acceso directo a <strong>Red de Talento Certificado</strong>.</span>
                 </li>
                  <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Acceso total a la base de recursos.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-500 font-light italic mt-4 pt-4 border-t border-zinc-100">
@@ -257,7 +257,7 @@ const Segmentation: React.FC = () => {
 
               <button onClick={() => openModal('demand')} className="w-full py-4 border border-zinc-300 flex justify-between items-center px-6 hover:border-black hover:bg-black hover:text-white transition-all">
                 <span className="text-sm font-bold uppercase tracking-widest">Cotizar Servicios</span>
-                <ArrowRight size={18} />
+                <ArrowRightIcon className="w-[18px] h-[18px]" />
               </button>
             </div>
 
@@ -284,15 +284,15 @@ const Segmentation: React.FC = () => {
                {/* Feature List */}
               <ul className="space-y-4 mb-12 flex-grow">
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Espacios totalmente equipados.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Acceso a comunidad de profesionales.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-700 font-light">
-                   <Check size={18} className="text-black shrink-0 mt-1" strokeWidth={1.5} />
+                   <CheckIcon className="w-[18px] h-[18px] text-black shrink-0 mt-1" strokeWidth={1.5} />
                    <span className="leading-tight">Soporte y acceso 24/7.</span>
                 </li>
                 <li className="flex items-start gap-3 text-zinc-500 font-light italic mt-6 pt-4 border-t border-zinc-100">
@@ -302,7 +302,7 @@ const Segmentation: React.FC = () => {
 
               <Link to="/spaces" className="w-full py-4 border border-zinc-300 flex justify-between items-center px-6 hover:border-black hover:bg-black hover:text-white transition-all">
                 <span className="text-sm font-bold uppercase tracking-widest">Reservar Espacio</span>
-                <ArrowRight size={18} />
+                <ArrowRightIcon className="w-[18px] h-[18px]" />
               </Link>
             </div>
         </div>

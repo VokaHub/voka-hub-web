@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRightIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
 interface ProcessStepProps {
@@ -42,9 +42,9 @@ const ProcessStep: React.FC<ProcessStepProps> = ({ number, title, subtitle, desc
       <div className="mt-auto relative z-10 pt-6 border-t border-zinc-900 flex items-center text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-indigo-400 transition-colors">
           {isScrollTrigger ? 'Empezar ahora' : 'Explorar'} 
           {isScrollTrigger ? (
-            <ArrowDown size={12} className="ml-3 group-hover:translate-y-1 transition-transform" />
+            <ArrowDownIcon className="w-3 h-3 ml-3 group-hover:translate-y-1 transition-transform" />
           ) : (
-            <ArrowRight size={12} className="ml-3 group-hover:translate-x-1 transition-transform" />
+            <ArrowRightIcon className="w-3 h-3 ml-3 group-hover:translate-x-1 transition-transform" />
           )}
       </div>
     </div>
@@ -98,21 +98,21 @@ const Process: React.FC = () => {
             number="02" 
             subtitle="Strategy"
             title={<span><span className="text-indigo-400">CÓMO</span> LO EJECUTO</span>}
-            desc="Plan de Acción Estratégico. Te entregamos tu hoja de ruta con análisis profundo y asesoría (Humano + IA)."
+            desc="Te entregamos tu hoja de ruta con análisis profundo y asesoría (Humano + IA) para lograr tu objetivo."
             link="/inside-crew"
           />
           <ProcessStep 
             number="03" 
             subtitle="Talent"
             title={<span><span className="text-indigo-400">QUIÉN</span> LO HACE</span>}
-            desc="Talento listo para ejecutar. Integra expertos certificados a tu equipo de inmediato, eliminando la fatiga de buscar."
+            desc="Integra expertos certificados a tu equipo de inmediato, eliminando la fatiga de buscar."
             link="/talentos"
           />
           <ProcessStep 
             number="04" 
             subtitle="Infrastructure"
             title={<span><span className="text-indigo-400">DÓNDE</span> SUCEDE</span>}
-            desc="Infraestructura de Autoridad. Proyecta estatus inmediato utilizando instalaciones que elevan el valor de tu marca."
+            desc="Proyecta autoridad inmediata utilizando instalaciones que elevan el valor de tu marca."
             link="/spaces"
           />
         </div>

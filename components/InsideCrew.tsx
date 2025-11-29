@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Cpu, DollarSign, Target } from 'lucide-react';
+import { UserIcon, CpuChipIcon, CurrencyDollarIcon, FlagIcon } from '@heroicons/react/24/outline';
 
 const InsideCrew: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const InsideCrew: React.FC = () => {
             
             <div className="group">
                 <div className="mb-6 text-zinc-400 group-hover:text-white transition-colors">
-                   <User size={32} strokeWidth={1} />
+                   <UserIcon className="w-8 h-8 stroke-1" />
                 </div>
                 <h4 className="text-lg font-medium text-white mb-4 tracking-tight">
                   Punto Único de Contacto
@@ -31,7 +31,7 @@ const InsideCrew: React.FC = () => {
 
             <div className="group">
                 <div className="mb-6 text-zinc-400 group-hover:text-white transition-colors">
-                   <Cpu size={32} strokeWidth={1} />
+                   <CpuChipIcon className="w-8 h-8 stroke-1" />
                 </div>
                 <h4 className="text-lg font-medium text-white mb-4 tracking-tight">
                   Diagnóstico Modular
@@ -43,7 +43,7 @@ const InsideCrew: React.FC = () => {
 
             <div className="group">
                 <div className="mb-6 text-zinc-400 group-hover:text-white transition-colors">
-                   <Target size={32} strokeWidth={1} />
+                   <FlagIcon className="w-8 h-8 stroke-1" />
                 </div>
                 <h4 className="text-lg font-medium text-white mb-4 tracking-tight">
                   Alineación de Objetivos
@@ -55,7 +55,7 @@ const InsideCrew: React.FC = () => {
 
             <div className="group">
                 <div className="mb-6 text-zinc-400 group-hover:text-white transition-colors">
-                   <DollarSign size={32} strokeWidth={1} />
+                   <CurrencyDollarIcon className="w-8 h-8 stroke-1" />
                 </div>
                 <h4 className="text-lg font-medium text-white mb-4 tracking-tight">
                   Eficiencia de Inversión

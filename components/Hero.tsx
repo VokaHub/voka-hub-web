@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { PlayIcon } from '@heroicons/react/24/solid';
 
 const Hero: React.FC = () => {
   return (
@@ -31,12 +32,12 @@ const Hero: React.FC = () => {
             <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
               <button className="group flex items-center gap-4 px-8 py-4 bg-white text-black hover:bg-zinc-200 transition-colors">
                 <span className="text-xs font-bold tracking-widest uppercase">Agendar Reunión</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               
               <button className="group flex items-center gap-4 px-6 py-4 border border-zinc-800 hover:border-indigo-500 transition-colors text-white">
                  <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-indigo-500 group-hover:text-white transition-all">
-                    <Play size={10} fill="currentColor" />
+                    <PlayIcon className="w-3 h-3" />
                  </div>
                  <span className="text-xs font-bold tracking-widest uppercase">Ver Demo Reel</span>
               </button>
