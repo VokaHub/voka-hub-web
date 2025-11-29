@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useProjects } from './context/ProjectsContext';
-import { Save, RotateCcw, Code, Wand2, X, Check } from 'lucide-react';
+import { ArrowDownTrayIcon, ArrowPathIcon, CodeBracketIcon, SparklesIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
 
 const AdminBar: React.FC = () => {
   const { isAdmin, toggleAdmin, resetData, projects, activeFieldHint } = useProjects();
@@ -33,10 +33,10 @@ const AdminBar: React.FC = () => {
         <div className="fixed bottom-24 right-6 w-80 bg-zinc-900 border border-indigo-500/30 shadow-2xl z-50 rounded-lg overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-300">
           <div className="bg-indigo-900/20 p-4 border-b border-indigo-500/20 flex justify-between items-center">
              <div className="flex items-center gap-2">
-                <Wand2 size={16} className="text-indigo-400" />
+                <SparklesIcon className="w-4 h-4 text-indigo-400" />
                 <span className="text-xs font-bold uppercase tracking-widest text-indigo-200">VOKA AI Guide</span>
              </div>
-             <button onClick={() => setShowAI(false)}><X size={14} className="text-zinc-500 hover:text-white" /></button>
+             <button onClick={() => setShowAI(false)}><XMarkIcon className="w-3.5 h-3.5 text-zinc-500 hover:text-white" /></button>
           </div>
           <div className="p-6">
              <div className="mb-4">
@@ -74,7 +74,7 @@ const AdminBar: React.FC = () => {
             onClick={() => setShowAI(!showAI)}
             className={`flex items-center gap-2 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest transition-colors border ${showAI ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-transparent text-indigo-400 border-indigo-900/50 hover:border-indigo-500'}`}
           >
-            <Wand2 size={14} /> AI Assistant
+            <SparklesIcon className="w-3.5 h-3.5" /> AI Assistant
           </button>
 
           <div className="h-6 w-px bg-zinc-800 mx-2"></div>
@@ -83,14 +83,14 @@ const AdminBar: React.FC = () => {
             onClick={resetData}
             className="flex items-center gap-2 px-4 py-2 bg-zinc-900 text-zinc-400 hover:text-red-400 hover:bg-zinc-800 rounded text-xs font-bold uppercase tracking-widest transition-colors"
           >
-            <RotateCcw size={14} /> Reset
+            <ArrowPathIcon className="w-3.5 h-3.5" /> Reset
           </button>
 
           <button 
             onClick={handleExport}
             className="flex items-center gap-2 px-4 py-2 bg-white text-black hover:bg-zinc-200 rounded text-xs font-bold uppercase tracking-widest transition-colors"
           >
-            {copySuccess ? <Check size={14} /> : <Code size={14} />}
+            {copySuccess ? <CheckIcon className="w-3.5 h-3.5" /> : <CodeBracketIcon className="w-3.5 h-3.5" />}
             {copySuccess ? 'Copiado!' : 'Exportar Data'}
           </button>
 
@@ -98,7 +98,7 @@ const AdminBar: React.FC = () => {
             onClick={toggleAdmin}
             className="ml-4 text-zinc-500 hover:text-white"
           >
-            <X size={20} />
+            <XMarkIcon className="w-5 h-5" />
           </button>
         </div>
       </div>
