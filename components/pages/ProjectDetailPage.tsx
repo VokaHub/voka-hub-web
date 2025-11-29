@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 
 const ProjectDetailPage: React.FC = () => {
